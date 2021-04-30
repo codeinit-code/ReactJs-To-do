@@ -4,9 +4,14 @@ import '../css/TodoList.css'
 
 function TodoList(){
 	return(
-		<div className="list-wraper">
+		<div className="list-wrapper">
+			<Todo done/>
 			<Todo />
+			<Todo done/>
 			<Todo />
+			<Todo done/>
+			<Todo />
+			<Todo done/>
 			<Todo />
 		</div>
 	)

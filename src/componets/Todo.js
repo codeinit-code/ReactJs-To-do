@@ -1,12 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import '../css/todo.css';
+import Checkmark from './Checkmark.js';
 
-function Todo(){
-	return(
-		<div className="list-item">
-			Tarea
-		    <button className="delete is-pulled-right"/>
-		</div>
-	)
+
+class Todo extends React.Component {
+
+	render (){
+		return(
+			<div className={`list-item ${this.props.done ? 'done' : ''} ` } >
+				Tarea
+				<div className="is-pulled-right">
+					<Checkmark done={this.props.done} />
+					<button className="delete is-pulled-right"/>
+				</div>
+			</div>
+		)
+	}
 };
+
+Todo.propTypes = {
+	done: PropTypes.bool
+}
+
 
 export default Todo;

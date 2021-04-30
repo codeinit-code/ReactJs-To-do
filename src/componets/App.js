@@ -10,11 +10,11 @@ function App() {
     <div className="wrapper">
         <div className="card frame">
 	        <Header/>
-	        <Form/>
 	        <TodoList/>
+	        <Form/>
         </div>
     </div>
-  );
-}
+  )
+};
 
 export default App;
